@@ -1,0 +1,85 @@
+use self::{Rank::*, Suit::*};
+
+#[derive(Eq, PartialEq, Ord, PartialOrd, Debug, Clone, Copy)]
+pub enum Rank {
+    Two,
+    Three,
+    Four,
+    Five,
+    Six,
+    Seven,
+    Eight,
+    Nine,
+    Ten,
+    Jack,
+    Queen,
+    King,
+    Ace,
+}
+
+#[derive(Eq, PartialEq, Debug, Clone, Copy)]
+pub enum Suit {
+    Clubs,
+    Diamonds,
+    Hearts,
+    Spades,
+}
+
+pub type Card = (Rank, Suit);
+
+pub fn deck_52() -> Vec<Card> {
+    vec![
+        (Two, Clubs),
+        (Three, Clubs),
+        (Four, Clubs),
+        (Five, Clubs),
+        (Six, Clubs),
+        (Seven, Clubs),
+        (Eight, Clubs),
+        (Nine, Clubs),
+        (Ten, Clubs),
+        (Jack, Clubs),
+        (Queen, Clubs),
+        (King, Clubs),
+        (Ace, Clubs),
+        (Two, Diamonds),
+        (Three, Diamonds),
+        (Four, Diamonds),
+        (Five, Diamonds),
+        (Six, Diamonds),
+        (Seven, Diamonds),
+        (Eight, Diamonds),
+        (Nine, Diamonds),
+        (Ten, Diamonds),
+        (Jack, Diamonds),
+        (Queen, Diamonds),
+        (King, Diamonds),
+        (Ace, Diamonds),
+        (Two, Hearts),
+        (Three, Hearts),
+        (Four, Hearts),
+        (Five, Hearts),
+        (Six, Hearts),
+        (Seven, Hearts),
+        (Eight, Hearts),
+        (Nine, Hearts),
+        (Ten, Hearts),
+        (Jack, Hearts),
+        (Queen, Hearts),
+        (King, Hearts),
+        (Ace, Hearts),
+        (Two, Spades),
+        (Three, Spades),
+        (Four, Spades),
+        (Five, Spades),
+        (Six, Spades),
+        (Seven, Spades),
+        (Eight, Spades),
+        (Nine, Spades),
+        (Ten, Spades),
+        (Jack, Spades),
+        (Queen, Spades),
+        (King, Spades),
+        (Ace, Spades),
+    ]
+}
